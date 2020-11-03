@@ -1,0 +1,23 @@
+{
+  "name": "10clouds",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress": "node_modules/.bin/cypress open",
+    "e2e-headless-chrome": "node_modules/.bin/cypress run --headless --browser chrome"
+  },
+  "author": "Kamil Oleksiuk",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^5.5.0",
+    "cypress-cucumber-preprocessor": "^4.0.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "./cypress/support/step_definitions",
+    "cucumberJson": {
+      "generate": false,
+      "outputFolder": "cypress/reports/cucumber-json"
+    }
+  }
+}
